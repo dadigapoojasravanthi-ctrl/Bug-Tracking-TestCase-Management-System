@@ -206,7 +206,7 @@ BUG TRACKING & TEST CASE MANAGEMENT SYSTEM
 **Pooja Sravanthi**
 
 - **GitHub:** https://github.com/dadigapoojasravanthi-ctrl
-- **LinkedIn:** https://www.linkedin.com/in/pooja-sravanthi-dadiga/
+- **LinkedIn:** https://www.linkedin.com/in/pooja-sravanthi-dadiga-/
 
 ---
 
