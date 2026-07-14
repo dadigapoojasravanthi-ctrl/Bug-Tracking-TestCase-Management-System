@@ -1,56 +1,72 @@
 # 🐞 Bug Tracking & Test Case Management System
 
-A Java-based console application developed using **Java, JDBC, and MySQL** to manage software bugs and test cases efficiently. The system allows users to perform CRUD (Create, Read, Update, Delete) operations on bugs and test cases while storing data in a MySQL database.
+A **console-based Bug Tracking & Test Case Management System** developed using **Java, JDBC, and MySQL**. The application helps users manage software bugs and test cases by providing features to create, view, search, update, and delete records. It demonstrates the use of **Core Java, JDBC, MySQL, and Object-Oriented Programming (OOP)** concepts in a real-world project.
 
 ---
 
 ## 📌 Features
 
-### Bug Management
-- Add new bugs
+### 🐞 Bug Management
+- Add a new bug
 - View all bugs
-- Update bug details
-- Delete bugs
-- Track bug priority and status
+- Search bug by ID
+- Update bug status
+- Delete bug
+- Track bug priority (High, Medium, Low)
+- Track bug status (Open, In Progress, Resolved, Closed)
 
-### Test Case Management
-- Add test cases
+### ✅ Test Case Management
+- Add a new test case
 - View all test cases
-- Update test cases
-- Delete test cases
-- Associate test cases with bugs
+- Search test case by ID
+- Update test case status
+- Delete test case
+- Link test cases with bugs
+- Track test execution status (Pass, Fail, Blocked)
 
-### Database
+### 💾 Database Features
 - MySQL database integration
 - JDBC connectivity
 - Persistent data storage
+- CRUD operations using SQL
+- Foreign key relationship between bugs and test cases
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- Java
-- JDBC
-- MySQL
-- Eclipse IDE
+- **Programming Language:** Java
+- **Database:** MySQL
+- **Connectivity:** JDBC
+- **IDE:** Eclipse
+- **Version Control:** Git & GitHub
 
 ---
 
 ## 📂 Project Structure
 
-```
-Bug-Tracking-TestCase-Management-System/
+```text
+BugTrackingSystem/
 │
 ├── src/
-│   ├── DBConnection.java
-│   ├── Bug.java
-│   ├── BugDAO.java
-│   ├── TestCase.java
-│   ├── TestCaseDAO.java
-│   └── Main.java
+│   └── com/
+│       └── bugtracker/
+│           ├── DBConnection.java
+│           ├── Bug.java
+│           ├── BugDAO.java
+│           ├── TestCase.java
+│           ├── TestCaseDAO.java
+│           ├── TestConnection.java
+│           └── Main.java
 │
-├── database/
-│   └── bug_tracking.sql
+├── screenshots/
+│   ├── main-menu.png
+│   ├── add-bug.png
+│   ├── view-bugs.png
+│   ├── add-testcase.png
+│   ├── search-testcase.png
+│   ├── update-testcase.png
+│   └── delete-testcase.png
 │
 ├── README.md
 └── .gitignore
@@ -58,33 +74,9 @@ Bug-Tracking-TestCase-Management-System/
 
 ---
 
-## 🗄️ Database Tables
+## 🚀 Getting Started
 
-### Bugs Table
-
-| Column | Description |
-|---------|-------------|
-| bug_id | Bug ID |
-| title | Bug Title |
-| description | Bug Description |
-| priority | High, Medium, Low |
-| status | Open, In Progress, Closed |
-| reported_by | Reporter's Name |
-
-### Test Cases Table
-
-| Column | Description |
-|---------|-------------|
-| test_case_id | Test Case ID |
-| bug_id | Related Bug ID |
-| test_case_name | Test Case Name |
-| expected_result | Expected Output |
-| actual_result | Actual Output |
-| status | Pass / Fail |
-
----
-
-## ⚙️ Prerequisites
+### Prerequisites
 
 - Java JDK 8 or above
 - Eclipse IDE
@@ -93,92 +85,119 @@ Bug-Tracking-TestCase-Management-System/
 
 ---
 
-## 🚀 How to Run
+### Clone the Repository
 
-1. Clone this repository
-
-```
-git clone https://github.com/yourusername/Bug-Tracking-TestCase-Management-System.git
+```bash
+git clone https://github.com/dadigapoojasravanthi-ctrl/Bug-Tracking-TestCase-Management-System.git
 ```
 
-2. Open the project in Eclipse.
+---
 
-3. Create the MySQL database.
+### Database Configuration
 
-4. Import the SQL file.
-
-5. Update database credentials in `DBConnection.java`.
+Update the database credentials in `DBConnection.java`.
 
 ```java
-String url = "jdbc:mysql://localhost:3306/bug_tracking";
+String url = "jdbc:mysql://localhost:3306/bugtracker";
 String user = "root";
 String password = "your_password";
 ```
 
-6. Run `Main.java`.
+Create the required database and tables in MySQL before running the application.
 
 ---
 
-## 💻 Sample Menu
+### Run the Project
 
-```
-====== Bug Tracking System ======
+1. Open the project in Eclipse.
+2. Configure the MySQL database.
+3. Add the MySQL JDBC Driver.
+4. Run `Main.java`.
+
+---
+
+## 💻 Application Menu
+
+```text
+=============================================
+BUG TRACKING & TEST CASE MANAGEMENT SYSTEM
+=============================================
+
+------------- BUG MODULE -------------
 
 1. Add Bug
-2. View Bugs
-3. Update Bug
-4. Delete Bug
+2. View All Bugs
+3. Search Bug
+4. Update Bug Status
+5. Delete Bug
 
-====== Test Case Management ======
+---------- TEST CASE MODULE ----------
 
-5. Add Test Case
-6. View Test Cases
-7. Update Test Case
-8. Delete Test Case
+6. Add Test Case
+7. View All Test Cases
+8. Search Test Case
+9. Update Test Case Status
+10. Delete Test Case
 
-9. Exit
+11. Exit
 ```
 
 ---
 
-## 📸 Sample Output
+## 📸 Screenshots
 
-```
-Database Connected Successfully!
+### Main Menu
 
-Bug Added Successfully!
+![Main Menu](screenshots/main-menu.png)
 
-Bug ID : 1
-Title : Login Error
-Priority : High
-Status : Open
+### Add Bug
 
-Test Case Added Successfully!
-```
+![Add Bug](screenshots/add-bug.png)
+
+### View All Bugs
+
+![View All Bugs](screenshots/view-bugs.png)
+
+### Add Test Case
+
+![Add Test Case](screenshots/add-testcase.png)
+
+### Search Test Case
+
+![Search Test Case](screenshots/search-testcase.png)
+
+### Update Test Case Status
+
+![Update Test Case Status](screenshots/update-testcase.png)
+
+### Delete Test Case
+
+![Delete Test Case](screenshots/delete-testcase.png)
 
 ---
 
-## 📚 Concepts Used
+## 🎯 Key Concepts Used
 
 - Core Java
 - Object-Oriented Programming (OOP)
 - JDBC
+- MySQL
 - SQL CRUD Operations
-- MySQL Database
 - Exception Handling
+- Menu-Driven Programming
 - Modular Programming
 
 ---
 
-## 🔮 Future Enhancements
+## 📈 Future Enhancements
 
 - User Authentication
-- Search Bugs
-- Filter Bugs by Status
+- Search Bugs by Priority
+- Assign Bugs to Developers
+- Dashboard with Bug Statistics
+- Email Notifications
 - GUI using Java Swing or JavaFX
-- Export Reports
-- Role-based Access
-- Bug Assignment to Developers
+- Export Reports (PDF/Excel)
 
 ---
 
@@ -186,9 +205,11 @@ Test Case Added Successfully!
 
 **Pooja Sravanthi**
 
-- GitHub: https://github.com/dadigapoojasravanthi-ctrl
-- LinkedIn: https://www.linkedin.com/in/pooja-sravanthi-dadiga/
+- **GitHub:** https://github.com/dadigapoojasravanthi-ctrl
+- **LinkedIn:** https://www.linkedin.com/in/pooja-sravanthi-dadiga/
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a star!
+## ⭐ Support
+
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
